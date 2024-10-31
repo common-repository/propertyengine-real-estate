@@ -1,0 +1,28 @@
+/**
+ * @author simonc
+ * @since 1.0 beta 1
+ * @version 1.0
+ */
+
+
+
+#propertyengine div.ui-tabs-panel{
+  border: none;
+  height: auto;
+  margin: 1.5em 0 0;
+  overflow: visible;
+  padding: 0;
+  width: auto;
+}
+
+#propertyengine li.ui-tabs-selected{
+  font-weight: bold;
+}
+
+#propertyengine #propertyengine-navigation.tablenav{
+  height: auto;
+}
+  #propertyengine #propertyengine-navigation.tablenav li,
+  #propertyengine #propertyengine-navigation.tablenav a.button-secondary{
+    display: inline;
+  }

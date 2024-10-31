@@ -1,0 +1,155 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>{#wppropertyengine.propertyengine_livelist}</title>
+    <script type="text/javascript" src="js/bootstrap.js"></script>
+    <script type="text/javascript" src="js/configuration.js"></script>
+    <script type="text/javascript" src="js/common.js"></script>
+    <script type="text/javascript" src="js/propertyengine.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/popup.css" medial="screen"/>
+    <base target="_self"/>
+</head>
+<body style="display: none">
+<form onsubmit="propertyengine.sendToRte(tinyMCEPopup.getWindowArg('widget'), this); return false;" method="post"
+      action="" id="widget-form">
+
+    <div class="tabs">
+        <ul>
+            <li id="general_tab" class="current"><span><a
+                    href="javascript:mcTabs.displayTab('general_tab','general_panel');" onmousedown="return false;">{#wppropertyengine_dlg.general_tab}</a></span>
+            </li>
+        </ul>
+    </div>
+
+    <div class="panel_wrapper">
+        <div id="general_panel" class="panel current">
+            <fieldset>
+                <legend>{#wppropertyengine_dlg.main_options}</legend>
+                <p>
+                    <label for="widgetid">{#wppropertyengine_dlg.livelist_id}</label>
+                    <input id="widgetid" name="widgetid" type="text" value="" class="required mceFocus"/>
+                    <span class="help">{#wppropertyengine_dlg.livelist_id_help}</span>
+                </p>
+            </fieldset>
+            <fieldset>
+                <legend>{#wppropertyengine_dlg.display_options}</legend>
+                <p>
+                    <label for="view">{#wppropertyengine_dlg.view_options}</label>
+                    <select name="view" id="view">
+                        <option value="">{#wppropertyengine_dlg.both}</option>
+                        <option value="list">{#wppropertyengine_dlg.view_list}</option>
+                        <option value="map">{#wppropertyengine_dlg.view_map}</option>
+                    </select>
+                    <span class="help">{#wppropertyengine_dlg.view_options_help}</span>
+                </p>
+                <p>
+                    <label for="startview">{#wppropertyengine_dlg.start_view_options}</label>
+                    <select name="startview" id="startview">
+                        <option value="">{#wppropertyengine_dlg.view_list}</option>
+                        <option value="map">{#wppropertyengine_dlg.view_map}</option>
+                    </select>
+                    <span class="help">{#wppropertyengine_dlg.start_view_options_help}</span>
+
+                </p>
+                 <p>
+                    <label for="showsearch">{#wppropertyengine_dlg.show_search}</label>
+                    <select name="showsearch" id="showsearch">
+                        <option value="yes">{#wppropertyengine_dlg.yes}</option>
+                        <option value="no">{#wppropertyengine_dlg.no}</option>
+                    </select>
+                </p>
+                
+                <div class="checkbox-container">
+                    <label for="showstatus-group">{#wppropertyengine_dlg.show_status_options}</label>
+                    <div id="showstatus-group" class="checkbox-set">
+                        <label><input type="checkbox" name="showstatus" value="unreleased" checked="checked"/> {#wppropertyengine_dlg.unreleased}</label>
+                        <label><input type="checkbox" name="showstatus" value="available" checked="checked"/> {#wppropertyengine_dlg.available}</label>
+                        <label><input type="checkbox" name="showstatus" value="under-offer" checked="checked"/> {#wppropertyengine_dlg.under-offer}</label>
+                        <label><input type="checkbox" name="showstatus" value="sold" checked="checked"/> {#wppropertyengine_dlg.sold}</label>
+                    </div>
+                </div>
+                <div class="checkbox-container">
+                    <label for="align">{#wppropertyengine_dlg.share_button}</label>
+                    <div class="checkbox-set">
+                        <label><input type="checkbox" name="sharebutton" value="email" checked="checked"/> {#wppropertyengine_dlg.email}</label>
+                        <label><input type="checkbox" name="sharebutton" value="download" checked="checked"/> {#wppropertyengine_dlg.download}</label>
+                        <label><input type="checkbox" name="sharebutton" value="print" checked="checked"/> {#wppropertyengine_dlg.print}</label>
+                    </div>
+                </div>
+                <div class="checkbox-container">
+                    <label for="align">{#wppropertyengine_dlg.hide_columns_options}</label>
+                    <div class="checkbox-set">
+                        <label><input type="checkbox" name="hidecolumns" value="saleStatus"/> {#wppropertyengine_dlg.col_sale_status}</label>
+                        <label><input type="checkbox" name="hidecolumns" value="label"/> {#wppropertyengine_dlg.col_label}</label>
+                        <label><input type="checkbox" name="hidecolumns" value="phase"/> {#wppropertyengine_dlg.col_phase}</label>
+                        <label><input type="checkbox" name="hidecolumns" value="block"/> {#wppropertyengine_dlg.col_block}</label>
+                        <label><input type="checkbox" name="hidecolumns" value="floor"/> {#wppropertyengine_dlg.col_floor}</label>
+                        <label><input type="checkbox" name="hidecolumns" value="description"/> {#wppropertyengine_dlg.col_description}</label>
+                        <label><input type="checkbox" name="hidecolumns" value="price"/> {#wppropertyengine_dlg.col_price}</label>
+                        <label><input type="checkbox" name="hidecolumns" value="plotSize"/> {#wppropertyengine_dlg.col_plot_size}</label>
+                        <label><input type="checkbox" name="hidecolumns" value="unitSize"/> {#wppropertyengine_dlg.col_unit_size}</label>
+                    </div>
+                </div>
+
+            </fieldset>
+            <!--
+            For version 1.1.1
+            <fieldset>
+                <legend>{#wppropertyengine_dlg.style_options}</legend>
+                <p>
+                    <label for="align">{#wppropertyengine_dlg.align}</label>
+                    <select name="align" id="align">
+                        <option value="">-- {#wppropertyengine_dlg.plugin_setting}</option>
+                        <option value="left">{#wppropertyengine_dlg.align_left}</option>
+                        <option value="center">{#wppropertyengine_dlg.align_center}</option>
+                        <option value="right">{#wppropertyengine_dlg.align_right}</option>
+                    </select>
+                </p>
+
+                <div>
+                    <label for="fontcolor">{#wppropertyengine_dlg.fontcolor}</label>
+                    <input id="fontcolor" name="fontcolor" type="text" value="" maxlength="7" class="hexa colorpicker"
+                           onkeyup="this.onchange();" onchange="updateColor('fontcolor_colorpicker','fontcolor');"/>
+
+                    <div id="fontcolor_colorpicker_holder" class="colorpicker"></div>
+                </div>
+                <div>
+                    <label for="linecolor">{#wppropertyengine_dlg.linecolor}</label>
+                    <input id="linecolor" name="linecolor" type="text" value="" maxlength="7" class="hexa colorpicker"
+                           onkeyup="this.onchange();" onchange="updateColor('linecolor_colorpicker','linecolor');"/>
+
+                    <div id="linecolor_colorpicker_holder" class="colorpicker"></div>
+                </div>
+                <div>
+                    <label for="bgcolor">{#wppropertyengine_dlg.bgcolor}</label>
+                    <input id="bgcolor" name="bgcolor" type="text" value="" maxlength="7" class="hexa colorpicker"
+                           onkeyup="this.onchange();" onchange="updateColor('bgcolor_colorpicker','bgcolor');"/>
+
+                    <div id="bgcolor_colorpicker_holder" class="colorpicker"></div>
+                </div>
+
+                <p>
+                    <label for="height">{#wppropertyengine_dlg.height}</label>
+                    <input id="height" name="height" type="text" maxlength="4" value="" class="size number"/>
+                </p>
+
+                <p>
+                    <label for="width">{#wppropertyengine_dlg.width}</label>
+                    <input id="width" name="width" type="text" maxlength="4" value="" class="size number"/>
+                </p>
+            </fieldset>-->
+        </div>
+
+    </div>
+    <div class="mceActionPanel">
+        <div style="float: left">
+            <input type="button" id="cancel" name="cancel" value="{#cancel}" onclick="tinyMCEPopup.close();"/>
+        </div>
+
+        <div style="float: right">
+            <input type="submit" id="insert" name="insert" value="{#insert}"/>
+        </div>
+    </div>
+</form>
+</body>
+</html>

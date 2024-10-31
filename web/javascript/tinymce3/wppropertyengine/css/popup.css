@@ -1,0 +1,117 @@
+/**
+ * @author simonc
+ * @since 1.1 beta
+ * @package tinymce
+ */
+
+.panel_wrapper div.current{
+  height: 300;
+  min-height: 300px;
+}
+html > body .panel_wrapper div.current{
+  height: auto;
+}
+
+form p{
+  clear: both;
+}
+
+/*
+ * Form fields
+ */
+form p label,
+form div label{
+	cursor: pointer;
+  display: block;
+  float: left;
+  padding-right: .5em;
+  text-align: right;
+  width: 30%;
+}
+form p.wide label,
+form div.wide label{
+  float: none;
+  clear: left;
+  text-align: left;
+  width: auto;
+}
+
+form .wide textarea{
+	margin: .5em auto;
+  width: 90%;
+}
+
+form span.help{
+  clear: both;
+  color: #666;
+  display: block;
+  margin-left: 30%;
+  padding-left: .5em;
+}
+
+div.checkbox-container{
+    margin-top: 5px;
+    overflow: hidden;
+    width: 100%;
+}
+div.checkbox-set{
+    float:left;
+    width:30%;
+    overflow: hidden;
+}
+div.checkbox-set label {
+    text-align: left;
+    width:100%;
+    display: block;
+    margin-top: 3px;
+    padding-left: 15px;
+    text-indent: -15px;
+}
+div.checkbox-set input {
+    width: 13px;
+    height: 13px;
+    padding: 0;
+    margin:0;
+    vertical-align: bottom;
+    position: relative;
+    top: -1px;
+    *overflow: hidden;
+}
+
+
+/*
+ * Colorpicker
+ */
+div.colorpicker{
+  display: inline;
+  position: absolute
+}
+
+input.colorpicker{
+  width: 7em;
+}
+
+/*
+ * Field types
+ */
+input.size{
+  width: 4em;
+}
+
+/*
+ * Copy/paste tab
+ */
+#copypaste_panel .mceActionPanelAlternative input{
+  background: #c6ffcb url('../img/wand.png') no-repeat 5px center;
+  color: #000;
+  cursor: pointer;
+  padding: 5px 5px 5px 25px;
+}
+
+#apply-magic-response{
+  display: none;
+}
+#apply-magic-response.error{
+  display: block;
+  color: #c00;
+}
